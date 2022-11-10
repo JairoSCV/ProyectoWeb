@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head th:replace="index :: cabecera"></head>
+  <body>
+  
+  <div class="site-wrap">
+    <header th:replace="index :: menuprincipal"></header>
+
+    <div class="bg-light py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-0"><a th:href="@{/}">Home</a> <span class="mx-2 mb-0">/</span> <a href="cart.html">Carrito de Compra</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Pago</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section fondito">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-12">
+            <div class="border p-4 rounded" role="alert">
+              ¿Nuevo cliente? <a th:href="@{/login}">Click aquí</a> para loguearte
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-5 mb-md-0">
+            <img src="images/cr7_like.jpg" alt="" class="img-fluid">
+          </div>
+          <div class="col-md-6">
+
+            
+            <div class="row mb-5">
+              <div class="col-md-12">
+                <h2 class="h3 mb-3 text-black">Tu Orden</h2>
+                <div class="p-3 p-lg-5 border">
+                  <table class="table site-block-order-table mb-5">
+                    <p class="text-black font-weight-bold text-center pb-3">
+                      Usted recibirá un SMS con respecto a la entrega de su(s) producto(s)
+                  </p>
+                    <thead>
+                      <th>Producto</th>
+                      <th>Total</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Item 1</td>
+                        <td>$250.00</td>
+                      </tr>
+                      <tr>
+                        <td>Item 2</td>
+                        <td>$100.00</td>
+                      </tr>
+                      <tr>
+                        <td class="text-black font-weight-bold"><strong>Subtotal</strong></td>
+                        <td class="text-black">$350.00</td>
+                      </tr>
+                      <tr>
+                        <td class="text-black font-weight-bold"><strong>Monto Total</strong></td>
+                        <td class="text-black font-weight-bold"><strong>$350.00</strong></td>
+                      </tr>
+                    </tbody>
+                    
+                  </table>
+
+
+
+                  <div class="form-group">
+                    <a th:href="@{/thankyou}"><button class="btn btn-primary btn-lg py-3 btn-block" type="button">CANCELAR MONTO</button></a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- </form> -->
+      </div>
+    </div>
+
+    <footer class="site-footer border-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mb-5 mb-lg-0">
+            <div class="row">
+              <div class="col-md-12">
+                <h3 class="footer-heading mb-4">Navegaciones</h3>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <ul class="list-unstyled">
+                  <li><a href="#">Sell online</a></li>
+                  <li><a href="#">Features</a></li>
+                  <li><a href="#">Shopping cart</a></li>
+                  <li><a href="#">Store builder</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <ul class="list-unstyled">
+                  <li><a href="#">Mobile commerce</a></li>
+                  <li><a href="#">Dropshipping</a></li>
+                  <li><a href="#">Website development</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <ul class="list-unstyled">
+                  <li><a href="#">Point of sale</a></li>
+                  <li><a href="#">Hardware</a></li>
+                  <li><a href="#">Software</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="block-5 mb-5">
+              <h3 class="footer-heading mb-4">Contáctenos</h3>
+              <ul class="list-unstyled">
+                <li class="address">203 Fake St. Mountain View, San Francisco, California, USA</li>
+                <li class="phone"><a href="tel://23923929210">+51 912 403 610</a></li>
+                <li class="email">apruebamep@domain.com</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>

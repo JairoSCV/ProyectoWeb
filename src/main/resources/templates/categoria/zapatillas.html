@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head th:replace="index :: cabecera"></head>
+  <body>
+  
+  <div class="site-wrap">
+    <header th:replace="index :: menuprincipal"></header>
+
+    <div class="bg-light py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-0"><a th:href="@{/}">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Tienda</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section fondito">
+      <div class="container">
+
+        <div class="row mb-5">
+          <div class="col-md-12 order-2">
+
+            <div class="row">
+              <div class="col-md-12 mb-5">
+                <div class="float-md-left mb-4"><h2 class="text-black h5">Zapatillas</h2></div>
+                <div class="d-flex">
+                    <div th:replace="shop :: seccion"></div>
+                    <div th:replace="shop :: categoria"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
+                    <div class="block-4 text-center border">
+                      <figure class="block-4-image">
+                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/198495-300-300?v=1752879709&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
+                      </figure>
+                      <div class="block-4-text p-4">
+                        <h3><a th:href="@{/shop-single}">Zapatillas Suprime Blanco</a></h3>
+                        <br/>
+                        <p class="text-primary font-weight-bold">S/ 69.93</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
+                    <div class="block-4 text-center border">
+                      <figure class="block-4-image">
+                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/293222-300-300?v=1752880578&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
+                      </figure>
+                      <div class="block-4-text p-4">
+                        <h3><a th:href="@{/shop-single}">Zapatillas Urbanas Hombre Gris</a></h3>
+                        <br/>
+                        <p class="text-primary font-weight-bold">S/ 119.90</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
+                    <div class="block-4 text-center border">
+                      <figure class="block-4-image">
+                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/269271-300-300?v=1752879698&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
+                      </figure>
+                      <div class="block-4-text p-4">
+                        <h3><a th:href="@{/shop-single}">Zapatillas Outdoor Mujer Marron</a></h3>
+                        <br/>
+                        <p class="text-primary font-weight-bold">S/ 179.90</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
+                    <div class="block-4 text-center border">
+                      <figure class="block-4-image">
+                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/269163-300-300?v=1752877082&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
+                      </figure>
+                      <div class="block-4-text p-4">
+                        <h3><a th:href="@{/shop-single}">Zapatillas Casuales Niña Nude</a></h3>
+                        <br/>
+                        <p class="text-primary font-weight-bold">S/ 69.93</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
+                    <div class="block-4 text-center border">
+                      <figure class="block-4-image">
+                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/246008-300-300?v=1752877098&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
+                      </figure>
+                      <div class="block-4-text p-4">
+                        <h3><a th:href="@{/shop-single}">Zapatillas Urbanas Niña Rosado</a></h3>
+                        <br/>
+                        <p class="text-primary font-weight-bold">S/ 55.93</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
+                    <div class="block-4 text-center border">
+                      <figure class="block-4-image">
+                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/262985-300-300?v=1752879770&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
+                      </figure>
+                      <div class="block-4-text p-4">
+                        <h3><a th:href="@{/shop-single}">Zapatillas Urbanas Para Hombre</a></h3>
+                        <br/>
+                        <p class="text-primary font-weight-bold">S/ 111.93</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
+                    <div class="block-4 text-center border">
+                      <figure class="block-4-image">
+                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/213213-300-300?v=1752703696&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
+                      </figure>
+                      <div class="block-4-text p-4">
+                        <h3><a th:href="@{/shop-single}">Zapatillas Urbanas Mujer Celeste</a></h3>
+                        <br/>
+                        <p class="text-primary font-weight-bold">S/ 89.91</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
+                    <div class="block-4 text-center border">
+                      <figure class="block-4-image">
+                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/244937-300-300?v=1752879641&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
+                      </figure>
+                      <div class="block-4-text p-4">
+                        <h3><a th:href="@{/shop-single}">Zapatillas Hombre Marron</a></h3>
+                        <br/>
+                        <p class="text-primary font-weight-bold">S/ 139.93</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
+                    <div class="block-4 text-center border">
+                      <figure class="block-4-image">
+                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/262536-300-300?v=1752861453&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
+                      </figure>
+                      <div class="block-4-text p-4">
+                        <h3><a th:href="@{/shop-single}">Zapatillas Urbanas Mujer Blanco</a></h3>
+                        <br/>
+                        <p class="text-primary font-weight-bold">S/ 89.91</p>
+                      </div>
+                    </div>
+                  </div>
+          </div>      
+        </div>    
+      </div>
+    </div>
+
+    <footer class="site-footer border-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mb-5 mb-lg-0">
+            <div class="row">
+              <div class="col-md-12">
+                <h3 class="footer-heading mb-4">Navegaciones</h3>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <ul class="list-unstyled">
+                  <li><a href="#">Sell online</a></li>
+                  <li><a href="#">Features</a></li>
+                  <li><a href="#">Shopping cart</a></li>
+                  <li><a href="#">Store builder</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <ul class="list-unstyled">
+                  <li><a href="#">Mobile commerce</a></li>
+                  <li><a href="#">Dropshipping</a></li>
+                  <li><a href="#">Website development</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <ul class="list-unstyled">
+                  <li><a href="#">Point of sale</a></li>
+                  <li><a href="#">Hardware</a></li>
+                  <li><a href="#">Software</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="block-5 mb-5">
+              <h3 class="footer-heading mb-4">Contáctenos</h3>
+              <ul class="list-unstyled">
+                <li class="address">203 Fake St. Mountain View, San Francisco, California, USA</li>
+                <li class="phone">+51 912 403 610</li>
+                <li class="email">apruebamep@domain.com</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>

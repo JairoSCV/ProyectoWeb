@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head th:replace="index :: cabecera"></head>
+  <body>
+  
+  <div class="site-wrap">
+    <header th:replace="index :: menuprincipal"></header>
+
+    <div class="bg-light py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-0"><a th:href="@{/}">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Registrate</strong></div>
+        </div>
+      </div>
+    </div>  
+
+    <div class="site-section fondito">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="h3 mb-3 text-black">Registrate</h2>
+          </div>
+          <div class="col-md-12">
+
+            <form action="#" method="post">
+              
+              <div class="p-3 p-lg-5 border">
+
+                <!--seccion 1-->
+                <div class="form-group row">
+
+                  <div class="col-md-4">
+                    <label for="c_dni" class="text-black">DNI<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="c_dni" name="c_dni">
+                  </div>
+
+                  <div class="col-md-4">
+                    <label for="c_nombres" class="text-black">Nombres <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="c_nombres" name="c_nombres">
+                  </div>
+
+                  <div class="col-md-4">
+                    <label for="c_apellidos" class="text-black">Apellidos <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="c_apellidos" name="c_apellidos">
+                  </div>
+
+                </div>
+
+                <!--seccion 2-->
+                <div class="form-group row">
+                  <div class="col-md-6">
+                    <label for="c_email" class="text-black">Correo <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="c_email" name="c_email" placeholder="">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="c_telefono" class="text-black">Telefono<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="c_telefono" name="c_telefono" placeholder="">
+                  </div>
+                </div>
+                <!--seccion 3-->
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="c_direccion" class="text-black">Direccion<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="c_subject" name="c_subject">
+                  </div>
+                </div>
+                <!--seccion 4-->
+                
+                <div class="form-group row">
+
+                  <div class="col-md-4">
+                    <label for="nro_tarjeta" class="text-black">Nro. de Tarjeta<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="nro_tarjeta" name="nro_tarjeta">
+                  </div>
+
+                  <div class="col-md-4">
+                    <label for="f_vencimiento" class="text-black">Fecha Vencimiento <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="f_vencimiento" name="f_vencimiento" placeholder="ejm: 06/22">
+                  </div>
+
+                  <div class="col-md-4">
+                    <label for="cvv" class="text-black">CVV <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="cvv" name="cvv">
+                  </div>
+
+                </div>
+
+                <!--Banco-->
+                <div class="form-group row">
+                  <div class="col-md-6">
+                    <label for="banco" class="text-black">Nro. de Tarjeta<span class="text-danger">*</span></label>
+                    <div class="mb-1 d-flex pt-4">
+                      <!--Tipos de bancos-->
+                      <label for="option-sm" class="d-flex mr-3 mb-3">
+                        <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-sm" name="shop-sizes"></span> <span class="d-inline-block text-black">VISA</span>
+                      </label>
+                      <label for="option-md" class="d-flex mr-3 mb-3">
+                        <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-md" name="shop-sizes"></span> <span class="d-inline-block text-black">MasterCard</span>
+                      </label>
+                      <label for="option-lg" class="d-flex mr-3 mb-3">
+                        <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-lg" name="shop-sizes"></span> <span class="d-inline-block text-black">American Express</span>
+                      </label>
+                      <label for="option-xl" class="d-flex mr-3 mb-3">
+                        <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-xl" name="shop-sizes"></span> <span class="d-inline-block text-black">Diners Club</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 text-center">
+                    <img src="images/bancos.png" alt="Image" class="img-fluid">
+                  </div>
+                </div>
+
+                <!--seccion 1-->
+                <div class="form-group row">
+
+                  <div class="col-md-6">
+                    <label for="user" class="text-black">Usuario<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="user" name="user" placeholder="Crea un usuario">
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="contrasenia" class="text-black">Contraseña<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="contrasenia" name="contrasenia" placeholder="Crea una contraseña">
+                  </div>
+                  </div>
+
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-lg-12 pt-5">
+                    <a th:href="@{/login}"><button type="button" class="btn btn-primary btn-lg btn-block">REGISTRARSE</button></a>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer border-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mb-5 mb-lg-0">
+            <div class="row">
+              <div class="col-md-12">
+                <h3 class="footer-heading mb-4">Navigations</h3>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <ul class="list-unstyled">
+                  <li><a href="#">Sell online</a></li>
+                  <li><a href="#">Features</a></li>
+                  <li><a href="#">Shopping cart</a></li>
+                  <li><a href="#">Store builder</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <ul class="list-unstyled">
+                  <li><a href="#">Mobile commerce</a></li>
+                  <li><a href="#">Dropshipping</a></li>
+                  <li><a href="#">Website development</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <ul class="list-unstyled">
+                  <li><a href="#">Point of sale</a></li>
+                  <li><a href="#">Hardware</a></li>
+                  <li><a href="#">Software</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="block-5 mb-5">
+              <h3 class="footer-heading mb-4">Contact Info</h3>
+              <ul class="list-unstyled">
+                <li class="address">203 Fake St. Mountain View, San Francisco, California, USA</li>
+                <li class="phone"><a href="tel://23923929210">+2 392 3929 210</a></li>
+                <li class="email">emailaddress@domain.com</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>

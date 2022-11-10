@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head th:replace="layout/dashboard :: header"></head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div th:replace="layout/dashboard :: barra"></div>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content" class="fondito">
+
+                <!-- Topbar -->
+                <div th:replace="layout/dashboard :: navegacion"></div>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 micolor">Lista de Ventas</h1>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <div th:replace="layout/dashboard :: footer"></div>>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Logout Modal-->
+    <div th:replace="layout/dashboard :: opciones_user"></div>>
+
+    <div th:replace="layout/dashboard :: librerias"></div>
+
+</body>
+
+</html>

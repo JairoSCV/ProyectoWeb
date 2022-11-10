@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head th:fragment="cabecera">
+    <title>El Paton</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" th:href="@{/https://fonts.googleapis.com/css?family=Mukta:300,400,700}"> 
+    <link rel="stylesheet" th:href="@{/fonts/icomoon/style.css}">
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/magnific-popup.css}">
+    <link rel="stylesheet" th:href="@{/css/jquery-ui.css}">
+    <link rel="stylesheet" th:href="@{/css/owl.carousel.min.css}">
+    <link rel="stylesheet" th:href="@{/css/owl.theme.default.min.css}">
+
+
+    <link rel="stylesheet" th:href="@{/css/aos.css}">
+    <link rel="stylesheet" th:href="@{/css/miestiloxd.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    
+  </head>
+  <body>
+  
+  <div class="site-wrap">
+    <header class="site-navbar" role="banner" th:fragment="menuprincipal">
+      <div class="site-navbar-top">
+        <div class="container">
+          <div class="row align-items-center">
+
+            <div class="col-6 col-md-4 order-2 order-md-1 site-search-icon text-left">
+            </div>
+
+            <div class="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
+              <div class="site-logo">
+                <a th:href="@{/}" class="js-logo-clone">El Paton</a>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 order-3 order-md-3 text-right">
+              <div class="site-top-icons">
+                <ul>
+                  <li><a th:href="@{/login}"><span class="icon icon-person"></span></a></li>
+                  <li>
+                    <a th:href="@{/cart}" class="site-cart">
+                      <span class="icon icon-shopping_cart"></span>
+                      <span class="count">2</span>
+                    </a>
+                  </li> 
+                  <li class="d-inline-block d-md-none ml-md-0"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu"></span></a></li>
+                </ul>
+              </div> 
+            </div>
+
+          </div>
+        </div>
+      </div> 
+      <nav class="site-navigation text-right text-md-center" role="navigation">
+        <div class="container">
+          <ul class="site-menu js-clone-nav d-none d-md-block">
+            <li>
+              <a th:href="@{/}">Home</a>
+            </li>
+            <li><a th:href="@{/shop}">Tienda</a></li>
+            <li><a th:href="@{/contact}">Contactenos</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="site-blocks-cover" style="background-image: url(https://bataperu.vtexassets.com/assets/vtex.file-manager-graphql/images/7a317a7c-b0cd-45b2-8f0b-141fa1dbd9c5___76156ec1f1f57f941586e64d1f865920.jpg);" data-aos="fade">
+      
+    </div>
+
+    <div class="site-section site-section-sm site-blocks-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4" data-aos="fade-up" data-aos-delay="">
+            <div class="icon mr-4 align-self-start">
+              <span class="icon-truck"></span>
+            </div>
+            <div class="text">
+              <h2 class="text-uppercase">Con entrega a domicilio</h2>
+              <p>Compra y recibe los mejores calzados desde la comodidad de tu hogar.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon mr-4 align-self-start">
+              <span class="icon-refresh2"></span>
+            </div>
+            <div class="text">
+              <h2 class="text-uppercase">Reembolsos disponibles</h2>
+              <p>Problemas con la talla? no te preocupes.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon mr-4 align-self-start">
+              <span class="icon-help"></span>
+            </div>
+            <div class="text">
+              <h2 class="text-uppercase">Atencion al cliente</h2>
+              <p>Puede contactarse con 912 403 610 para recibir soporte tecnico o hacer consultas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section site-blocks-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0" data-aos="fade" data-aos-delay="">
+            <a class="block-2-item" th:href="@{/damas}">
+              <figure class="image">
+                <img src="images/women.jpg" alt="" class="img-fluid">
+              </figure>
+              <div class="text">
+                <span class="text-uppercase">Colecciones</span>
+                <h3>Mujeres</h3>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
+            <a class="block-2-item" th:href="infantil">
+              <figure class="image">
+                <img src="images/children.jpg" alt="" class="img-fluid">
+              </figure>
+              <div class="text">
+                <span class="text-uppercase">Colecciones</span>
+                <h3>Niños</h3>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
+            <a class="block-2-item" th:href="caballeros">
+              <figure class="image">
+                <img src="images/men.jpg" alt="" class="img-fluid">
+              </figure>
+              <div class="text">
+                <span class="text-uppercase">Colecciones</span>
+                <h3>Hombres</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section block-3 site-blocks-2 bg-light fondito">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7 site-section-heading text-center pt-4">
+            <h2>Nuestros Productos</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="nonloop-block-3 owl-carousel">
+              <div class="item">
+                <div class="block-4 text-center">
+                  <figure class="block-4-image">
+                    <img src="https://bataperu.vtexassets.com/arquivos/ids/244432-500-auto?v=1750996734&width=500&height=auto&aspect=true" alt="Image placeholder" class="img-fluid">
+                  </figure>
+                  <div class="block-4-text p-4">
+                    <h3><a th:href="@{/shop-single}">Bubblegummers Zapatillas Outdoor Niño Marron</a></h3>
+                    <br/>
+                    <p class="text-primary font-weight-bold">S/ 69.93</p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="block-4 text-center">
+                  <figure class="block-4-image">
+                    <img src="https://bataperu.vtexassets.com/arquivos/ids/258321-500-auto?v=1750846548&width=500&height=auto&aspect=true" alt="Image placeholder" class="img-fluid">
+                  </figure>
+                  <div class="block-4-text p-4">
+                    <h3><a th:href="@{/shop-single}">Bubblegummers Botines Casuales Para Niña Camel</a></h3>
+                    <br/>
+                    <p class="text-primary font-weight-bold">S/ 59.95</p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="block-4 text-center">
+                  <figure class="block-4-image">
+                    <img src="https://bataperu.vtexassets.com/arquivos/ids/244136-500-auto?v=1751059174&width=500&height=auto&aspect=true" alt="Image placeholder" class="img-fluid">
+                  </figure>
+                  <div class="block-4-text p-4">
+                    <h3><a th:href="@{/shop-single}">Botines Casuales Mujer Negro</a></h3>
+                    <br/>
+                    <p class="text-primary font-weight-bold">S/ 75.96</p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="block-4 text-center">
+                  <figure class="block-4-image">
+                    <img src="https://bataperu.vtexassets.com/arquivos/ids/245222-500-auto?v=1750829914&width=500&height=auto&aspect=true" alt="Image placeholder" class="img-fluid">
+                  </figure>
+                  <div class="block-4-text p-4">
+                    <h3><a th:href="@{/shop-single}">Power Zapatillas Deportivas Hombre Azul</a></h3>
+                    <br/>
+                    <p class="text-primary font-weight-bold">S/ 83.94</p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="block-4 text-center">
+                  <figure class="block-4-image">
+                    <img src="https://bataperu.vtexassets.com/arquivos/ids/243993-500-auto?v=1751078377&width=500&height=auto&aspect=true" alt="Image placeholder" class="img-fluid">
+                  </figure>
+                  <div class="block-4-text p-4">
+                    <h3><a th:href="@{/shop-single}"> Botines Casuales Mujer Negro</a></h3>
+                    <br/>
+                    <p class="text-primary font-weight-bold">S/ 64.95</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer border-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mb-5 mb-lg-0">
+            <div class="row">
+              <div class="col-md-12">
+                <h3 class="footer-heading mb-4">Navigations</h3>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <ul class="list-unstyled">
+                  <li><a href="#">Compra online</a></li>
+                  <li><a href="#">Features</a></li>
+                  <li><a href="#">Carrito</a></li>
+                  <li><a href="#">Store builder</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <ul class="list-unstyled">
+                  <li><a href="#">Mobile commerce</a></li>
+                  <li><a href="#">Dropshipping</a></li>
+                  <li><a href="#">Website development</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <ul class="list-unstyled">
+                  <li><a href="#">Point of sale</a></li>
+                  <li><a href="#">Hardware</a></li>
+                  <li><a href="#">Software</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="block-5 mb-5">
+              <h3 class="footer-heading mb-4">Contáctenos</h3>
+              <ul class="list-unstyled">
+                <li class="address">100 Huallaga Av. Abancay, Cercado de Lima, Perú</li>
+                <li class="phone">+51 912 403 610</li>
+                <li class="email">apruebamep@domain.com</li>
+              </ul>
+            </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
