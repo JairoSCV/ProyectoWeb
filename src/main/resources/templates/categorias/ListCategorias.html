@@ -25,49 +25,31 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-
                     <div class="card mt-3">
                         <!--Cabecera-->
                         <div class="d-sm-flex align-items-center justify-content-between mb-4 card-header">
-                            <h1 class="h3 mb-0 micolor">Proveedores</h1>
+                            <h1 class="h3 mb-0 micolor">Categorías</h1>
                         </div>
                         <!--Cuerpo-->
                         <div class="card-body">
-                            <form th:action="@{/lista-proveedor/formulario}" th:object="${proveedor}" method="post">
+                            <form th:action="@{/lista-categorias/formulario}" th:object="${categoria}" method="post">
                                 <input type="hidden" th:field="*{id}"/>
                                 <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="form-label col-md-1 ml-3">Nombre: </div>
+                                            <input th:field=*{nombre} placeholder="Ingrese el nombre de la categoría" class="form-control col-md-6" type="text"/>
+                                            <br><br>
+                                            <div class="text-center col-md-3">
+                                                <button type="submit" class="btn btn-info">
+                                                    <i class="fa-solid fa-floppy-disk"></i> Guardar Categoría
+                                                </button>
+                                                
+                                            </div>
 
-                                    <div class="col-md-6">
-                                        <label class="form-label">Proveedor</label>
-                                        <input th:field="*{id}" placeholder="Ingrese número de proveedor" class="form-control" type="number">
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label class="form-label">Nombre</label>
-                                        <input th:field="*{nombre}" placeholder="Ingrese nombre del proveedor" class="form-control" type="text">
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label class="form-label">Teléfono</label>
-                                        <input th:field="*{telefono}" placeholder="Ingrese número de teléfono" class="form-control" type="text">
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label class="form-label">Procedencia</label>
-                                        <input th:field="*{procedencia}" placeholder="Ingrese procedencia del proveedor" class="form-control" type="text">
-                                    </div>
-                                </div>
-                                <br><br>
-                                    <div class="row">
-                                        <div class="col-12 text-center">
-                                            <!--submit -> para que un botón pueda enviar la información-->
-                                            <button type="submit" class="btn btn-info">
-                                                <!--Añadir imagen-->
-                                                <i class="fa-solid fa-floppy-disk"></i> Guardar Proveedor
-                                            </button>
                                         </div>
                                     </div>
-
+                                </div>
                             </form>
                         </div>
 
@@ -78,38 +60,32 @@
                     <div class="card mt-3">
                         <!-- Page Heading -->
                         <div class="d-sm-flex align-items-center justify-content-between mb-4 card-header">
-                            <h1 class="h3 mb-0 micolor">Lista de Proveedores</h1>
+                            <h1 class="h3 mb-0 micolor">Lista de Categorías</h1>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered table-hover">
                                     <thead>
                                         <tr>
-                                            <th>Número</th>
                                             <th>Nombre</th>
-                                            <th>Teléfono</th>
-                                            <th>Procedencia</th>
                                             <th></th>
                                             <th></th>
                                         </tr>
                                     </thead>
 
                                     <tbody>
-                                        <tr th:each="item: ${listaProveedores}">
-                                            <td th:text="${item.id}"></td>
+                                        <tr th:each="item: ${listaCategorias}">
                                             <td th:text="${item.nombre}"></td>
-                                            <td th:text="${item.telefono}"></td>
-                                            <td th:text="${item.procedencia}"></td>
                                             <td class="text-center">
-                                                <a th:href="@{/lista-proveedor/editar/}+ ${item.id}" class="btn btn-warning">
+                                                <a th:href="@{/lista-categorias/editar/}+ ${item.id}" class="btn btn-warning">
                                                     <i class="fa-solid fa-pen-to-square"></i> Editar
                                                 </a>
                                             </td>
                                             
                                             <td class="text-center">
                                                 <!--hacemos referencia a la ruta /categoria/eliminar/ y le enviamos el ID de la categoria-->
-                                                <a th:href="@{/lista-proveedor/eliminar/}+ ${item.id}" class="btn btn-danger" 
-                                                onclick="return confirm('¿Desea eliminar este proveedor?')">
+                                                <a th:href="@{/lista-categorias/eliminar/}+ ${item.id}" class="btn btn-danger" 
+                                                onclick="return confirm('¿Desea eliminar la categoría?')">
                                                     <i class="fa-solid fa-trash"></i> Eliminar
                                                 </a>
                                             </td>
@@ -119,8 +95,6 @@
                             </div>
                         </div>
                     </div>
-
-
 
                 </div>
                 <!-- /.container-fluid -->
