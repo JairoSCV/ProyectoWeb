@@ -13,6 +13,7 @@ import com.proyecto.proyectoweb.model.servicio.IProveedorService;
 @Controller
 @RequestMapping("/lista-proveedor")
 public class ListaProveedores {
+    @Autowired
     private IProveedorService proveedorService;
     
     @RequestMapping("/")
@@ -23,11 +24,9 @@ public class ListaProveedores {
         return "proveedor/ListProv";
     }
 
-      /*Este método es para guardar el formulario, explicacion: line 20(categoria/index)*/
       @RequestMapping(value = "/formulario", method = RequestMethod.POST)
-      public String guardar(Proveedor proveedor){/*Enviamos esa categoria a la interfaz ICategoriaService, mediante inyeccion de dependencias*/
+      public String guardar(Proveedor proveedor){
         proveedorService.guardarProveedor(proveedor);
-          /*Una vez guardado, redireccionar a /categoria/ */
           return "redirect:/lista-proveedor/";
       }
   
