@@ -1,15 +1,15 @@
 package com.proyecto.proyectoweb.model.entidad;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "proveedor")
-public class Proveedor {
+public class Proveedor implements Serializable{
     @Id
     @Column(name = "nro_proveedor")
     private Long id;
