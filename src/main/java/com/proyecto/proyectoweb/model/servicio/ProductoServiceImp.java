@@ -1,5 +1,7 @@
 package com.proyecto.proyectoweb.model.servicio;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +23,11 @@ public class ProductoServiceImp implements IProductoService{
             rpta=e.getMessage();
         }
         return rpta;
+    }
+
+    @Override
+    public List<Producto> cargarProducto() {
+        return (List<Producto>) productoDAO.findAll();
     }
     
 }

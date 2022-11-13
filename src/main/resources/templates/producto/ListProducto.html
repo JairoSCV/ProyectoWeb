@@ -25,10 +25,128 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 micolor">Lista de Productos</h1>
+
+                    <div class="card mt-3">
+                        <div class="d-sm-flex align-items-center justify-content-between mb-4 card-header">
+                            <h1 class="h3 mb-0 micolor">Productos</h1>
+                        </div>
+                    
+
+                    <div class="card-body">
+                        <form th:action="@{/lista-producto/form}" th:object="${producto}" method="post">
+
+                                <div class="row mt-1">
+                                    <div class="col-md-4">
+                                        <label>Categoria</label>
+                                        <!--Start selector-->
+                                        <select class="form-select mt-1 ml-2" th:field="*{categoria.id}">
+                                            <option value="">Seleccione una opción</option>
+                                            <option th:each="item: ${listaCategorias}" th:value="${item.id}" th:text="${item.nombre}"></option>
+                                        </select>
+
+                                    </div>
+                                    
+                                    <div class="col-md-4">
+                                        <label>Proveedor</label>
+                                        <!--Start selector-->
+                                        <select class="form-select mt-1 ml-2" th:field="*{proveedor.id}">
+                                            <option value="">Seleccione una opción</option>
+                                            <option th:each="item: ${listaProveedor}" th:value="${item.id}" th:text="${item.nombre}"></option>
+                                        </select>
+
+                                    </div>
+                                    
+                                    <div class="col-md-4">
+                                        <label>Seccion</label>
+                                        <!--Start selector-->
+                                        <select class="form-select mt-1 ml-2" th:field="*{seccion.id}">
+                                            <option value="">Seleccione una opción</option>
+                                            <option th:each="item: ${listaSeccion}" th:value="${item.id}" th:text="${item.nombre}"></option>
+                                        </select>
+
+                                    </div>
+                                </div>
+
+                                <div class="row mt-5">
+                                    <div class="col-md-12">
+                                        <label>Stock</label>
+                                        <!--Start selector-->
+                                        <select class="form-select mt-1 ml-2" th:field="*{stock.id}">
+                                            <option value="">Seleccione una opción</option>
+                                            <option th:each="item: ${listaStock}" th:value="${item.id}" th:text="${item.descripcion}"></option>
+                                        </select>
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mt-3">
+                                        <label>Nombre del producto: </label>
+                                        <input type="text" th:field="*{nombre}" class="form-control"/>
+                                    </div>
+            
+                                    <div class="col-md-6 mt-3">
+                                        <label>Precio del producto: </label>
+                                        <input type="text" th:field="*{precio}" class="form-control"/>
+                                    </div>
+                                </div>
+
+
+                            
+                            <div class="row mt-5">
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-info">
+                                        <i class="fa-solid fa-floppy-disk"></i> Guardar Producto
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        
                     </div>
+
+
+                    </div>
+
+
+                    <!--Lista de categorias-->
+                    <div class="card mt-4">
+                        <div class="d-sm-flex align-items-center justify-content-between mb-4 card-header">
+                            <h1 class="h3 mb-0 micolor">Lista de Productos</h1>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <!--table-hover -> para que el puntero cambie de color de la columna-->
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre</th>
+                                            <th>Precio</th>
+                                            <th>Categoria</th>
+                                            <th>Proveedor</th>
+                                            <th>Seccion</th>
+                                            <th>Stock</th>
+                                            <th>Talla</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!--Mostrará todos los registros que existan-->
+                                        <tr th:each="item: ${listaProducto}">
+                                            <!--th:text -> imprime en texto el atributo-->
+                                            <td th:text="${item.nombre}"></td>
+                                            <td th:text="${item.precio}"></td>
+                                            <td th:text="${item.categoria.nombre}"></td>
+                                            <td th:text="${item.proveedor.nombre}"></td>
+                                            <td th:text="${item.seccion.nombre}"></td>
+                                            <td th:text="${item.stock.cantidad}"></td>
+                                            <td th:text="${item.stock.talla}"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                      </div>
+
+
 
                 </div>
                 <!-- /.container-fluid -->
