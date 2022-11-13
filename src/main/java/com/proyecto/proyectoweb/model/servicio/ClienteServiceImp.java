@@ -21,7 +21,7 @@ public class ClienteServiceImp implements IClienteService{
 
     @Override
     public List<Cliente> cargarClientes() {
-        return clienteDAO.findAllClientes();
+        return (List<Cliente>) clienteDAO.findAll();
     }
 
     @Override

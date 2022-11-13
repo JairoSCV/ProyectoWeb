@@ -10,35 +10,27 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.proyecto.proyectoweb.model.entidad.Cliente;
 import com.proyecto.proyectoweb.model.entidad.Persona;
 import com.proyecto.proyectoweb.model.servicio.IClienteService;
-import com.proyecto.proyectoweb.model.servicio.IPersonaService;
 
 @Controller
 @RequestMapping("/lista-cliente")
 public class ListaClienteController {
     @Autowired
     private IClienteService clienteService;
-    @Autowired
-    private IPersonaService personaService;
     
     @RequestMapping("/")
     public String inicio(Model model){
-        Persona persona = new Persona();
         Cliente cliente = new Cliente();
-        persona.setCliente(cliente);
-        model.addAttribute("persona", persona);
-        model.addAttribute("listaPersona", personaService.cargarPersonas());
-
-        /*Cliente cliente = new Cliente();
+        Persona persona = new Persona();
+        cliente.setPersona(persona);
         model.addAttribute("cliente", cliente);
-        model.addAttribute("listaClientes", clienteService.cargarClientes());*/
+        model.addAttribute("listaPersona", clienteService.cargarClientes());
 
         return "cliente/ListClient";
     }
 
     @RequestMapping(value = "/form", method = RequestMethod.POST)
-    public String guardar(Cliente cliente, Persona persona, Model model, RedirectAttributes flash){
-        personaService.guardarPersona(persona);
-        //clienteService.guardarCliente(cliente);
+    public String guardar(Cliente cliente, Model model, RedirectAttributes flash){
+        clienteService.guardarCliente(cliente);
         return "redirect:/lista-cliente/";
     }
 

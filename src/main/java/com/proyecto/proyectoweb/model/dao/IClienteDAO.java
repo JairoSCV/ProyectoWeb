@@ -9,6 +9,6 @@ import com.proyecto.proyectoweb.model.entidad.Cliente;
 
 public interface IClienteDAO extends CrudRepository<Cliente, Long>{
     
-    @Query(value="select persona.dni, nombres, apellidos, celular, direccion, correo from persona inner join cliente on persona.dni = cliente.dni", nativeQuery = true)
-    public List<Cliente> findAllClientes();
+    /*@Query(value="select persona.dni, nombres, apellidos, celular, direccion, correo from persona inner join cliente on persona.dni = cliente.dni", nativeQuery = true)
+    public List<Cliente> findAllClientes();*/
 }

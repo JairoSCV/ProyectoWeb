@@ -6,6 +6,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -31,7 +32,7 @@ public class Persona implements Serializable{
     @Column(name = "correo")
     private String correo;
 
-    @OneToOne(mappedBy = "persona", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "persona")
     private Cliente cliente;
 
     public Long getId() {
@@ -89,9 +90,6 @@ public class Persona implements Serializable{
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
-
-   
-
 
     
 }

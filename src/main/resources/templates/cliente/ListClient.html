@@ -33,38 +33,39 @@
                         </div>
                         <!--Cuerpo-->
                         <div class="card-body">
-                            <form th:action="@{/lista-cliente/form}" th:object="${persona}" method="post">
+                            <form th:action="@{/lista-cliente/form}" th:object="${cliente}" method="post">
+                                <input type="hidden" th:field="*{id}"/>
                                 <div class="row">
                                     <div class="col-md-4">
                                         <label class="form-label">DNI</label>
-                                        <input th:field="*{id}" placeholder="Ingrese número de DNI" class="form-control" type="number">
+                                        <input th:field="*{persona.id}" placeholder="Ingrese número de DNI" class="form-control" type="number">
                                     </div>
 
                                     <div class="col-md-4">
                                         <label class="form-label">Nombres</label>
-                                        <input th:field="*{nombres}" placeholder="Ingrese nombres completos" class="form-control" type="text">
+                                        <input th:field="*{persona.nombres}" placeholder="Ingrese nombres completos" class="form-control" type="text">
                                     </div>
 
                                     <div class="col-md-4">
                                         <label class="form-label">Apellidos</label>
-                                        <input th:field="*{apellidos}" placeholder="Ingrese apellidos" class="form-control" type="text">
+                                        <input th:field="*{persona.apellidos}" placeholder="Ingrese apellidos" class="form-control" type="text">
                                     </div>
                                 </div>
                                 
                                 <div class="row mt-3">
                                     <div class="col-md-4">
                                         <label class="form-label">Telefono</label>
-                                        <input th:field="*{celular}" placeholder="Ingrese número de teléfono" class="form-control" type="number">
+                                        <input th:field="*{persona.celular}" placeholder="Ingrese número de teléfono" class="form-control" type="number">
                                     </div>
 
                                     <div class="col-md-4">
                                         <label class="form-label">Direccion</label>
-                                        <input th:field="*{direccion}" placeholder="Ingrese direccion del cliente" class="form-control" type="text">
+                                        <input th:field="*{persona.direccion}" placeholder="Ingrese direccion del cliente" class="form-control" type="text">
                                     </div>
 
                                     <div class="col-md-4">
                                         <label class="form-label">Correo</label>
-                                        <input th:field="*{correo}" placeholder="Ingrese correo del cliente" class="form-control" type="text">
+                                        <input th:field="*{persona.correo}" placeholder="Ingrese correo del cliente" class="form-control" type="text">
                                     </div>
                                 </div>
                                     

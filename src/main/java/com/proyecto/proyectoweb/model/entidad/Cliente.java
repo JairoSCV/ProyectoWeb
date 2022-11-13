@@ -2,6 +2,7 @@ package com.proyecto.proyectoweb.model.entidad;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,8 +21,8 @@ public class Cliente implements Serializable{
     @Column(name = "cli_id")
     private Long id;
     
-    @OneToOne
-    @JoinColumn(name = "DNI")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "dni")
     private Persona persona;
 
     public Long getId() {
@@ -39,5 +40,7 @@ public class Cliente implements Serializable{
     public void setPersona(Persona persona) {
         this.persona = persona;
     }
+
+    
   
 }
