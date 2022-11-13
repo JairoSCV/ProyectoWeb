@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.proyecto.proyectoweb.model.dao.ISeccionDAO;
 import com.proyecto.proyectoweb.model.entidad.Producto;
 import com.proyecto.proyectoweb.model.servicio.ICategoriaService;
 import com.proyecto.proyectoweb.model.servicio.IProductoService;

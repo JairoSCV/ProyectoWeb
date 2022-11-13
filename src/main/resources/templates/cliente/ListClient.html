@@ -25,6 +25,25 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
+                    
+                <!--Seccion alertas-->
+                <!--Guardar-->
+                <div class="alert alert-success alert-dismissable" th:if="${guardar != null}">
+                    <label th:text="${guardar}"></label>
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                </div>
+
+                <!--Editar-->
+                <div class="alert alert-warning alert-dismissable" th:if="${editar != null}">
+                    <label th:text="${editar}"></label>
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                </div>
+
+                <!--Eliminar-->
+                <div class="alert alert-danger alert-dismissable" th:if="${eliminar != null}">
+                    <label th:text="${eliminar}"></label>
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                </div>
 
                     <div class="card mt-3">
                         <!--Cabecera-->
@@ -88,8 +107,41 @@
                     </div>
 
 
-                    <!--Lista de categorias-->
-                    
+                    <!--Lista de clientes-->
+                    <div class="card mt-4">
+                        <div class="d-sm-flex align-items-center justify-content-between mb-4 card-header">
+                            <h1 class="h3 mb-0 micolor">Lista de Clientes</h1>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <!--table-hover -> para que el puntero cambie de color de la columna-->
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>DNI</th>
+                                            <th>Nombres</th>
+                                            <th>Apellidos</th>
+                                            <th>Celular</th>
+                                            <th>Direccion</th>
+                                            <th>Correo</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!--Mostrará todos los registros que existan-->
+                                        <tr th:each="item: ${listaCliente}">
+                                            <!--th:text -> imprime en texto el atributo-->
+                                            <td th:text="${item.persona.id}"></td>
+                                            <td th:text="${item.persona.nombres}"></td>
+                                            <td th:text="${item.persona.apellidos}"></td>
+                                            <td th:text="${item.persona.celular}"></td>
+                                            <td th:text="${item.persona.direccion}"></td>
+                                            <td th:text="${item.persona.correo}"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                      </div>
 
 
 

@@ -23,7 +23,7 @@ public class ListaClienteController {
         Persona persona = new Persona();
         cliente.setPersona(persona);
         model.addAttribute("cliente", cliente);
-        model.addAttribute("listaPersona", clienteService.cargarClientes());
+        model.addAttribute("listaCliente", clienteService.cargarClientes());
 
         return "cliente/ListClient";
     }
@@ -31,6 +31,7 @@ public class ListaClienteController {
     @RequestMapping(value = "/form", method = RequestMethod.POST)
     public String guardar(Cliente cliente, Model model, RedirectAttributes flash){
         clienteService.guardarCliente(cliente);
+        flash.addFlashAttribute("guardar", "Nuevo cliente registrado");
         return "redirect:/lista-cliente/";
     }
 

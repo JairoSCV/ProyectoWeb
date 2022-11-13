@@ -15,7 +15,7 @@ public class ProductoServiceImp implements IProductoService{
 
     @Override
     public String guardarProducto(Producto producto) {
-        String rpta = "";
+        String rpta = "aa";
         try{
             productoDAO.save(producto);
             rpta="Se guardó el producto correctamente";
