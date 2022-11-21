@@ -30,114 +30,21 @@
               </div>
             </div>
             <div class="row mb-5">
-                <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/269781-300-300?v=1752879624&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Zapatos Casuales Hombre Azul</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 179.91</p>
-                      </div>
-                    </div>
+
+              
+              <div class="col-sm-6 col-lg-4 mb-4" th:each="item: ${listaHombres}" data-aos="fade-up">
+                <div class="block-4 text-center border">
+                  <figure class="block-4-image">
+                    <a th:href="@{/shop-single/{id} (id=${item.id})}"><img src="https://falabella.scene7.com/is/image/FalabellaPE/882482758_1?wid=1004&hei=1500&crop=248,0,1004,1500&qlt=70" alt="Image placeholder" class="img-fluid"></a>
+                  </figure>
+                  <div class="block-4-text p-4">
+                    <h3><a th:href="@{/shop-single/{id} (id=${item.id})}" th:text="${item.nombre}"></a></h3>
+                    <br/>
+                    <p class="text-primary font-weight-bold">S/ <span th:text="${item.precio}"></span></p>
                   </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/293222-300-300?v=1752880578&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Zapatillas Urbanas Hombre Gris</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 119.90</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/273603-300-300?v=1752879721&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Botines Hombre Marron</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 183.92</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/242686-300-300?v=1750870015&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Zapatos Hombre Peter Negro</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 118.93</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/273585-300-300?v=1750799583&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Zapatos De Vestir Hombre Negro</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 169.90</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/273594-300-300?v=1752879789&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Botines Casuales Hombre Camel</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 229.90</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/262985-300-300?v=1752879770&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Zapatillas Urbanas Para Hombre</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 111.93</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/273605-300-300?v=1752879685&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Botines Casuales Hombre Negro</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/  206.91</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/244937-300-300?v=1752879641&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Zapatillas Hombre Marron</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 139.93</p>
-                      </div>
-                    </div>
-                  </div>
+                </div>
+              </div>
+
           </div>      
         </div>    
       </div>

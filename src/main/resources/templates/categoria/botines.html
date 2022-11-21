@@ -30,114 +30,22 @@
               </div>
             </div>
             <div class="row mb-5">
-                <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
+
+
+                <div class="col-sm-6 col-lg-4 mb-4" th:each="item: ${listaBotines}"  data-aos="fade-up">
                     <div class="block-4 text-center border">
                       <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/269681-300-300?v=1752861473&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
+                        <a th:href="@{/shop-single/{id} (id=${item.id})}"><img src="https://bataperu.vtexassets.com/arquivos/ids/251965-300-300?v=1751061662&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
                       </figure>
                       <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Botines Casuales Mujer Taupe</a></h3>
+                        <h3><a th:href="@{/shop-single/{id} (id=${item.id})}" th:text="${item.nombre}"></a></h3>
                         <br/>
-                        <p class="text-primary font-weight-bold">S/ 167.93</p>
+                        <p class="text-primary font-weight-bold">S/ <span th:text="${item.precio}"></span></p>
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/251965-300-300?v=1751061662&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Botines Casuales Mujer Gris</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 113.94</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/273594-300-300?v=1752879789&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Botines Casuales Hombre Camel</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 229.90</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/273603-300-300?v=1752879721&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Botines Hombre Marron</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 183.92</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/190751-300-300?v=1752703639&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Botines Casuales Ifantil Amarillo</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 109.90</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/190747-300-300?v=1752703656&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Botines Casuales Ifantil Azul</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 109.90</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/271324-300-300?v=1752879786&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Botín Para Niño Camel</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 80.91</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/244311-300-300?v=1752879640&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Botines Casuales Mujer Negro</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 189.90</p>
-                      </div>
-                    </div>
-                  </div> 
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/273605-300-300?v=1752879685&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Botines Casuales Hombre Negro</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/  206.91</p>
-                      </div>
-                    </div>
-                  </div>
+
+                  
           </div>      
         </div>    
       </div>

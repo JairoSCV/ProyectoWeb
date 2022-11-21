@@ -30,114 +30,21 @@
               </div>
             </div>
             <div class="row mb-5">
-                <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/271324-300-300?v=1752879786&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Botín Para Niño Camel</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 80.91</p>
-                      </div>
-                    </div>
+
+              
+              <div class="col-sm-6 col-lg-4 mb-4" th:each="item: ${listaNinos}" data-aos="fade-up">
+                <div class="block-4 text-center border">
+                  <figure class="block-4-image">
+                    <a th:href="@{/shop-single/{id} (id=${item.id})}"><img src="https://falabella.scene7.com/is/image/FalabellaPE/18845750_1?wid=1500&hei=1500&qlt=70" width="100%" alt="Image placeholder" class="img-fluid"></a>
+                  </figure>
+                  <div class="block-4-text p-4">
+                    <h3><a th:href="@{/shop-single/{id} (id=${item.id})}" th:text="${item.nombre}"></a></h3>
+                    <br/>
+                    <p class="text-primary font-weight-bold">S/ <span th:text="${item.precio}"></span></p>
                   </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/190747-300-300?v=1752703656&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Botines Casuales Ifantil Azul</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 109.90</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/243418-300-300?v=1752879664&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Zapatos Escolar Niña Negro</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 89.91</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/198495-300-300?v=1752879709&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Zapatillas Suprime Blanco</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 69.93</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/190751-300-300?v=1752703639&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Botines Casuales Ifantil Amarillo</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 109.90</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/246008-300-300?v=1752877098&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Zapatillas Urbanas Niña Rosado</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 55.93</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/243412-300-300?v=1750832575&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Zapatos Escolar Niño Negro</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 89.90</p>
-                      </div>
-                    </div>>
                 </div>
-                <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                    <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/243432-300-300?v=1752879725&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                    </figure>
-                    <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Zapatos Escolar Niño Negro</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 107.91</p>
-                    </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/269163-300-300?v=1752877082&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Zapatillas Casuales Niña Nude</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 69.93</p>
-                      </div>
-                    </div>
-                </div>
+              </div>
+              
           </div>      
         </div>    
       </div>

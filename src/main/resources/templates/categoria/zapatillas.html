@@ -30,114 +30,21 @@
               </div>
             </div>
             <div class="row mb-5">
-                <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
+
+                <div class="col-sm-6 col-lg-4 mb-4" th:each="item: ${listaZapatillas}" data-aos="fade-up">
                     <div class="block-4 text-center border">
                       <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/198495-300-300?v=1752879709&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
+                        <a th:href="@{/shop-single/{id} (id=${item.id})}"><img src="https://bataperu.vtexassets.com/arquivos/ids/244937-300-300?v=1752879641&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
                       </figure>
                       <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Zapatillas Suprime Blanco</a></h3>
+                        <h3><a th:href="@{/shop-single/{id} (id=${item.id})}" th:text="${item.nombre}"></a></h3>
                         <br/>
-                        <p class="text-primary font-weight-bold">S/ 69.93</p>
+                        <p class="text-primary font-weight-bold">S/ <span th:text="${item.precio}"></span></p>
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/293222-300-300?v=1752880578&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Zapatillas Urbanas Hombre Gris</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 119.90</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/269271-300-300?v=1752879698&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Zapatillas Outdoor Mujer Marron</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 179.90</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/269163-300-300?v=1752877082&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Zapatillas Casuales Niña Nude</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 69.93</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/246008-300-300?v=1752877098&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Zapatillas Urbanas Niña Rosado</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 55.93</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/262985-300-300?v=1752879770&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Zapatillas Urbanas Para Hombre</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 111.93</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/213213-300-300?v=1752703696&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Zapatillas Urbanas Mujer Celeste</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 89.91</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/244937-300-300?v=1752879641&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Zapatillas Hombre Marron</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 139.93</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="block-4 text-center border">
-                      <figure class="block-4-image">
-                        <a th:href="@{/shop-single}"><img src="https://bataperu.vtexassets.com/arquivos/ids/262536-300-300?v=1752861453&width=300&height=300&aspect=true" alt="Image placeholder" class="img-fluid"></a>
-                      </figure>
-                      <div class="block-4-text p-4">
-                        <h3><a th:href="@{/shop-single}">Zapatillas Urbanas Mujer Blanco</a></h3>
-                        <br/>
-                        <p class="text-primary font-weight-bold">S/ 89.91</p>
-                      </div>
-                    </div>
-                  </div>
+
+                  
           </div>      
         </div>    
       </div>
