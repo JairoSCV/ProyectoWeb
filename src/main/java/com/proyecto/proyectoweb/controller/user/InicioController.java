@@ -1,15 +1,22 @@
 package com.proyecto.proyectoweb.controller.user;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.proyecto.proyectoweb.model.entidad.DetalleVenta;
 import com.proyecto.proyectoweb.model.entidad.Producto;
+import com.proyecto.proyectoweb.model.entidad.Venta;
 import com.proyecto.proyectoweb.model.servicio.IProductoService;
 
 @Controller
@@ -18,6 +25,14 @@ public class InicioController {
 
     @Autowired
     private IProductoService productoService;
+
+    private final Logger log = LoggerFactory.getLogger(InicioController.class);
+
+    //Para almacenar los detalles de la orden
+    List<Venta> ventas = new ArrayList<Venta>();
+    
+    //Datos de la Orden
+    DetalleVenta detalleVenta = new DetalleVenta();
 
     @RequestMapping("")
     public String inicio(){
@@ -39,7 +54,29 @@ public class InicioController {
         return "contact";
     }
     @PostMapping("cart")
-    public String cart(){
+    public String cart(@RequestParam Long id, @RequestParam Integer cantidad, Model model){
+        Venta venta = new Venta();
+        Producto producto = new Producto();
+        double sumatotal = 0;
+        
+        Optional<Producto> optionalProducto = productoService.get(id);
+
+        producto = optionalProducto.get();
+
+        venta.setCantidad(cantidad);
+        venta.setObservacion(producto.getNombre());
+        venta.setTalla(producto.getStock().getTalla());
+        double precioFinal= Math.round((producto.getPrecio()*cantidad)*100)/100d;
+        venta.setMonto(precioFinal);
+        venta.setProducto(producto);
+
+        ventas.add(venta);
+
+        sumatotal = ventas.stream().mapToDouble(dt->dt.getMonto()).sum();
+
+        detalleVenta.setMonto_total(sumatotal);
+        model.addAttribute("cart", ventas);
+        model.addAttribute("orden", detalleVenta);
         return "cart";
     }
     @RequestMapping("checkout")
@@ -50,11 +87,7 @@ public class InicioController {
     public String register(){
         return "register";
     }
-    /*@RequestMapping("shop-single")
-    public String single(){
-        
-        return "shop-single";
-    }*/
+    
     @RequestMapping("shop-single/{id}")
     public String single(@PathVariable Long id, Model model){
         Producto producto = new Producto();

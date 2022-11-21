@@ -44,6 +44,7 @@
   
     <div class="col-md-6">
       <form th:action="@{/cart}", method="POST">
+        <input type="hidden" th:value="${producto.id}" name="id">
             <h2 class="text-black" th:text="${producto.nombre}"></h2>
             <p><strong class="text-primary h4">S/ <span th:text="${producto.precio}"></span></strong></p>
             <p>Talla: <span th:text="${producto.stock.talla}"></span></p>
