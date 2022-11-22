@@ -79,6 +79,30 @@ public class InicioController {
         model.addAttribute("orden", detalleVenta);
         return "cart";
     }
+
+    //Quitar producto del carrito
+    @RequestMapping("/delete/cart/{id}")
+    public String borrarProductoCarrito(@PathVariable Long id, Model model){
+        //Lista nueva de productos
+        List<Venta> ordenesNueva = new ArrayList<Venta>();
+
+        for(Venta venta: ventas){
+            if(venta.getProducto().getId()!=id){
+                ordenesNueva.add(venta);
+            }
+        }
+
+        //poner la nueva lista con los productos restantes
+        ventas=ordenesNueva;
+
+        double sumaTotal = 0;
+        sumaTotal = ventas.stream().mapToDouble(dt->dt.getMonto()).sum();
+        detalleVenta.setMonto_total(sumaTotal);
+        model.addAttribute("cart", ventas);
+        model.addAttribute("orden", detalleVenta);
+        return "cart";
+    }
+
     @RequestMapping("checkout")
     public String checkout(){
         return "checkout";
