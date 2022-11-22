@@ -70,7 +70,14 @@ public class InicioController {
         venta.setMonto(precioFinal);
         venta.setProducto(producto);
 
-        ventas.add(venta);
+
+        //Validar que el producto no se añada 2 veces
+        Long idProducto = producto.getId();
+        boolean ingresado = ventas.stream().anyMatch(p -> p.getProducto().getId()==idProducto);
+
+        if(!ingresado){
+            ventas.add(venta);
+        }
 
         sumatotal = ventas.stream().mapToDouble(dt->dt.getMonto()).sum();
 
@@ -81,7 +88,7 @@ public class InicioController {
     }
 
     //Quitar producto del carrito
-    @RequestMapping("/delete/cart/{id}")
+    @RequestMapping("delete/cart/{id}")
     public String borrarProductoCarrito(@PathVariable Long id, Model model){
         //Lista nueva de productos
         List<Venta> ordenesNueva = new ArrayList<Venta>();
@@ -102,6 +109,14 @@ public class InicioController {
         model.addAttribute("orden", detalleVenta);
         return "cart";
     }
+
+    @RequestMapping("obtenerCarrito")
+    public String obtenerCarrito(Model model){
+        model.addAttribute("cart", ventas);
+        model.addAttribute("orden", detalleVenta);
+        return "cart";
+    }
+
 
     @RequestMapping("checkout")
     public String checkout(){
