@@ -43,21 +43,17 @@
                       <th>Total</th>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>Item 1</td>
-                        <td>$250.00</td>
-                      </tr>
-                      <tr>
-                        <td>Item 2</td>
-                        <td>$100.00</td>
+                      <tr th:each="item: ${cart}">
+                        <td th:text="${item.observacion}">Item 1</td>
+                        <td th:text="${item.monto}"></td>
                       </tr>
                       <tr>
                         <td class="text-black font-weight-bold"><strong>Subtotal</strong></td>
-                        <td class="text-black">$350.00</td>
+                        <td class="text-black" th:text="${orden.monto_total}"></td>
                       </tr>
                       <tr>
                         <td class="text-black font-weight-bold"><strong>Monto Total</strong></td>
-                        <td class="text-black font-weight-bold"><strong>$350.00</strong></td>
+                        <td class="text-black font-weight-bold"><strong  th:text="${orden.monto_total}"></strong></td>
                       </tr>
                     </tbody>
                     

@@ -2,6 +2,7 @@ package com.proyecto.proyectoweb.model.entidad;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -24,7 +25,8 @@ public class Tarjeta implements Serializable{
     @JoinColumn(name = "dni")
     Persona persona;
 
-    @OneToOne(mappedBy = "tarjeta")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "info_id")
     private Info info;
 
     public Long getId() {

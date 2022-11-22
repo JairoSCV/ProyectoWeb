@@ -31,9 +31,6 @@ public class Venta implements Serializable{
     @JoinColumn(name = "id_venta")
     DetalleVenta detalleVenta;
 
-    @ManyToOne
-    @JoinColumn(name = "cli_id")
-    Cliente cliente;
 
     public Long getId() {
         return id;
@@ -91,11 +88,4 @@ public class Venta implements Serializable{
         this.detalleVenta = detalleVenta;
     }
 
-    public Cliente getCliente() {
-        return cliente;
-    }
-
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
-    }
 }

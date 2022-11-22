@@ -22,8 +22,7 @@ public class Info implements Serializable{
     private double saldo;
     private int nro_cuenta;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "nro_tarjeta")
+    @OneToOne(mappedBy = "info")
     private Tarjeta tarjeta;
 
     public Long getId() {

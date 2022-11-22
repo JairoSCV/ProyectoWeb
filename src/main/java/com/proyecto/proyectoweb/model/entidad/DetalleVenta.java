@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
@@ -28,6 +30,10 @@ public class DetalleVenta implements Serializable{
     @Column(name = "fecha")
     @Temporal(TemporalType.DATE)
     private Date fecha;
+
+    @ManyToOne
+    @JoinColumn(name = "cli_id")
+    Cliente cliente;
 
     @PrePersist
     @PreUpdate
@@ -57,6 +63,14 @@ public class DetalleVenta implements Serializable{
 
     public void setFecha(Date fecha) {
         this.fecha = fecha;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
     

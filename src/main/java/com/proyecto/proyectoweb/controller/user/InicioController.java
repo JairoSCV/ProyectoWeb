@@ -119,7 +119,10 @@ public class InicioController {
 
 
     @RequestMapping("checkout")
-    public String checkout(){
+    public String checkout(Model model){
+        //variable "cart" contiene toda la lista de las ordenes
+        model.addAttribute("cart", ventas);
+        model.addAttribute("orden", detalleVenta);
         return "checkout";
     }
     @RequestMapping("register")
