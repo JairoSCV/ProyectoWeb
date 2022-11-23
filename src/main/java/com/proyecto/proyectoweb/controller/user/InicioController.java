@@ -41,7 +41,7 @@ public class InicioController {
     @Autowired
     private IDetalleOrdenService detalleOrdenService;
 
-    private final Logger log = LoggerFactory.getLogger(InicioController.class);
+    //private final Logger log = LoggerFactory.getLogger(InicioController.class);
 
     //Para almacenar los detalles de la orden
     List<Venta> ventas = new ArrayList<Venta>();
@@ -140,10 +140,8 @@ public class InicioController {
         model.addAttribute("orden", detalleVenta);
         return "checkout";
     }
-    @RequestMapping("register")
-    public String register(){
-        return "register";
-    }
+
+
     
     @RequestMapping("shop-single/{id}")
     public String single(@PathVariable Long id, Model model){
