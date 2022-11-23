@@ -1,6 +1,7 @@
 package com.proyecto.proyectoweb.controller.user;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,9 +15,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.proyecto.proyectoweb.model.dao.IOrdenDAO;
+import com.proyecto.proyectoweb.model.entidad.Cliente;
 import com.proyecto.proyectoweb.model.entidad.DetalleVenta;
 import com.proyecto.proyectoweb.model.entidad.Producto;
 import com.proyecto.proyectoweb.model.entidad.Venta;
+import com.proyecto.proyectoweb.model.servicio.IClienteService;
+import com.proyecto.proyectoweb.model.servicio.IDetalleOrdenService;
+import com.proyecto.proyectoweb.model.servicio.IOrdenService;
 import com.proyecto.proyectoweb.model.servicio.IProductoService;
 
 @Controller
@@ -25,6 +31,15 @@ public class InicioController {
 
     @Autowired
     private IProductoService productoService;
+
+    @Autowired
+    private IClienteService clienteService;
+
+    @Autowired
+    private IOrdenService ordenService;
+
+    @Autowired
+    private IDetalleOrdenService detalleOrdenService;
 
     private final Logger log = LoggerFactory.getLogger(InicioController.class);
 
@@ -143,6 +158,36 @@ public class InicioController {
     public String thankyou(){
         return "thankyou";
     }
+
+    //guardar la Orden
+    @RequestMapping("saveOrder")
+    public String saveOrder(){
+        Date fecha = new Date();
+        detalleVenta.setFecha(fecha);
+
+        //Cliente
+        Long id = (long) 3;
+
+        Cliente cliente = clienteService.busCliente(id);
+
+        detalleVenta.setCliente(cliente);
+        ordenService.save(detalleVenta);
+
+
+        //guardar detalles
+        for(Venta dt:ventas){
+            dt.setDetalleVenta(detalleVenta);
+            detalleOrdenService.save(dt);
+        }
+
+        //limpiar lista y orden
+        detalleVenta = new DetalleVenta();
+        ventas.clear();
+
+        return "redirect:/";
+    }
+
+
     //SECCION
     @RequestMapping("caballeros")
     public String seccion01(Model model){
