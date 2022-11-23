@@ -124,6 +124,8 @@
                                             <th>Celular</th>
                                             <th>Direccion</th>
                                             <th>Correo</th>
+                                            <th></th>
+                                            <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -136,6 +138,17 @@
                                             <td th:text="${item.persona.celular}"></td>
                                             <td th:text="${item.persona.direccion}"></td>
                                             <td th:text="${item.persona.correo}"></td>
+                                            <td class="text-center">
+                                                <a th:href="@{/lista-cliente/editar/}+ ${item.id}" class="btn btn-warning">
+                                                    <i class="fa-solid fa-pen-to-square"></i> Editar
+                                                </a>
+                                            </td>
+                                            <td class="text-center">
+                                                <a th:href="@{/lista-cliente/eliminar/}+ ${item.id}" class="btn btn-danger" 
+                                                onclick="return confirm('¿Desea eliminar el cliente?')">
+                                                    <i class="fa-solid fa-trash"></i> Eliminar
+                                                </a>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>

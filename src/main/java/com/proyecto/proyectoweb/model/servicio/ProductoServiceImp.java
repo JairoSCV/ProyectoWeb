@@ -70,5 +70,10 @@ public class ProductoServiceImp implements IProductoService{
     public void delete(Long id) {
         productoDAO.deleteById(id);
     }
+
+    @Override
+    public Producto busProducto(Long id) {
+        return productoDAO.findById(id).orElse(null);
+    }
   
 }

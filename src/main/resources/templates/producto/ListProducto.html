@@ -43,7 +43,7 @@
                     <div class="card-body">
 
                         <form th:action="@{/lista-producto/form}" th:object="${producto}" method="post">
-
+                            <input type="hidden" th:field="*{id}"/>
                                 <div class="row mt-1">
                                     <div class="col-md-4">
                                         <label>Categoria</label>
@@ -135,6 +135,8 @@
                                             <th>Seccion</th>
                                             <th>Stock</th>
                                             <th>Talla</th>
+                                            <th></th>
+                                            <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -148,6 +150,17 @@
                                             <td th:text="${item.seccion.nombre}"></td>
                                             <td th:text="${item.stock.cantidad}"></td>
                                             <td th:text="${item.stock.talla}"></td>
+                                            <td class="text-center">
+                                                <a th:href="@{/lista-producto/editar/}+ ${item.id}" class="btn btn-warning">
+                                                    <i class="fa-solid fa-pen-to-square"></i> Editar
+                                                </a>
+                                            </td>
+                                            <td class="text-center">
+                                                <a th:href="@{/lista-producto/eliminar/}+ ${item.id}" class="btn btn-danger" 
+                                                onclick="return confirm('¿Desea eliminar el producto?')">
+                                                    <i class="fa-solid fa-trash"></i> Eliminar
+                                                </a>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
