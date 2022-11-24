@@ -60,10 +60,6 @@ public class InicioController {
         return "shop";
     }
 
-    @RequestMapping("login")
-    public String login(){
-        return "login";
-    }
     @RequestMapping("contact")
     public String contactanos(){
         return "contact";
